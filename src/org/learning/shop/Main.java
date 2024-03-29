@@ -9,6 +9,8 @@ public class Main {
         Product prova = new Product("Prova", "Questa è una prova", 29.00);
 
         System.out.println(prova.netPrice());
+
+        System.out.println(prova.grossPrice());
     }
 }
 

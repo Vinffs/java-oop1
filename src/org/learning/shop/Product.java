@@ -36,6 +36,13 @@ public class Product {
         return this.price;
     }
 
+    public BigDecimal grossPrice() {
+        BigDecimal vat = new BigDecimal(this.vat);
+        BigDecimal gross = this.price.add(this.price.multiply(vat));
+
+        return gross.setScale(2, RoundingMode.HALF_UP);
+    }
+
 
 
 }
