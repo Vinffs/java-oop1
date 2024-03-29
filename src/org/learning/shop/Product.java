@@ -43,6 +43,11 @@ public class Product {
         return gross.setScale(2, RoundingMode.HALF_UP);
     }
 
+    public String fullName() {
+        String formatCode = String.format("%08d", this.code);
+        return formatCode + "-" + this.name;
+    }
+
 
 
 }
