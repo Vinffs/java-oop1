@@ -1,10 +1,5 @@
 package org.learning.shop;
 
-import org.jcp.xml.dsig.internal.dom.DOMUtils;
-
-import java.math.BigDecimal;
-import java.util.Arrays;
-
 public class Main {
     public static void main(String[] args) {
 
