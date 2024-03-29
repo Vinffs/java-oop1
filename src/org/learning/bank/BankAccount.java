@@ -27,15 +27,7 @@ public class BankAccount {
 
     }
 
-
     // METHODS
-
-    /*
-    1 metodo per versare la somma di denaro sul conto
-    1 metodo per prelevare una somma di denato ( il BALANCE non può essere negativo )
-    metodi per ritornare le informazioni del conto e il saldo
-
-     */
 
     public String getName() {
         return this.holderName;
@@ -50,6 +42,17 @@ public class BankAccount {
     }
 
     public BigDecimal deposit(BigDecimal value) {
-        return this.balance.add(value);
+        this.balance = this.balance.add(value);
+        return this.balance;
+    }
+
+    public String withdraw(BigDecimal value) {
+        this.balance = this.balance.subtract(value);
+
+        if(this.balance.compareTo(BigDecimal.ZERO) < 0) {
+            return "You can't withdraw this amount.";
+        } else {
+            return "Your withdraw has been processed with success! Your new balance is: € " + String.format("%.2f", this.balance);
+        }
     }
 }
