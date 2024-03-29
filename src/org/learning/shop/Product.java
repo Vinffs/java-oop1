@@ -32,6 +32,9 @@ public class Product {
 
     // METHODS
 
+    public BigDecimal netPrice(){
+        return this.price;
+    }
 
 
 
